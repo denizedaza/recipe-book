@@ -1,10 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { Recipe } from './recipe.model';
+import { RecipesService } from './recipes.services';
 
 @Component({
   selector: 'app-recipes',
   templateUrl: './recipes.component.html',
-  styleUrls: ['./recipes.component.css']
+  styleUrls: ['./recipes.component.css'],
+  providers: [RecipesService]
 })
 export class RecipesComponent implements OnInit {
   selectedRecipe: Recipe;
@@ -13,9 +15,5 @@ export class RecipesComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
-  // onRecipeClicked(recipeData: {name: string, desc: string, img: string}) {
-
-  // }
 
 }
